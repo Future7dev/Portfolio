@@ -282,7 +282,7 @@ export default function Portfolio() {
         .port-btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
         /* AVATAR */
-        .port-avatar-wrap { position: relative; display: flex; justify-content: center; }
+        .port-avatar-wrap { position: relative; display: flex; justify-content: center; bottom:6rem; }
         .port-orbit {
           position: absolute; width: 320px; height: 320px; top: 50%; left: 50%;
           transform: translate(-50%,-50%);
