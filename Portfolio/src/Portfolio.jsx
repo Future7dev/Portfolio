@@ -462,12 +462,10 @@ export default function Portfolio() {
               <div className="port-orbit"><div className="port-orbit-dot" /></div>
               <div className="port-avatar-ring">
                 <div className="port-avatar-inner">
-                  {/*
-                    TO ADD YOUR PHOTO:
-                    Replace the "PK" text below with:
-                    <img src="YOUR_PHOTO_URL_HERE" alt="Priyam Koley" />
-                  */}
-                  PK
+                  
+                    <img src="pic.png" alt="Priyam Koley in a polished professional portrait inside a circular avatar frame, set against a glowing orbit accent and showing a confident, approachable expression" />
+                  
+                
                 </div>
               </div>
               <div className="port-avatar-badge">🟢 Open to Work</div>
