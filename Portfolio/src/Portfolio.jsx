@@ -197,7 +197,7 @@ export default function Portfolio() {
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-          --bg: #0a0a0f;
+          --bg: #13131f;
           --surface: #12121a;
           --glass: rgba(255,255,255,0.04);
           --glass-border: rgba(255,255,255,0.08);
