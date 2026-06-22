@@ -246,7 +246,7 @@ export default function Portfolio() {
         /* HERO */
         .port-hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
         .port-hero-grid {
-          display: grid; grid-template-columns: 1fr 340px; gap: 4rem;
+          display: grid; grid-template-columns: 1fr 440px; gap: 8rem;
           align-items: center; width: 100%;
         }
         .port-hero-tag {
