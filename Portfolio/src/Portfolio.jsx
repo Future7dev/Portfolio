@@ -314,8 +314,8 @@ export default function Portfolio() {
         }
               .avatar-bg {
         position: relative;
-        width: 300px;      /* adjust */
-        height: 300px;     /* adjust */
+        width: 520px;      /* adjust */
+        height: 570px;     /* adjust */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -329,11 +329,11 @@ export default function Portfolio() {
 
       .avatar-bg img {
         position: relative;
-        z-index: 1;
-        width: 220px;      /* adjust */
-        height: 220px;     /* adjust */
+       pointer-events: none;
+        width: 320px;      /* adjust */
+        height: 420px;     /* adjust */
         object-fit: cover;
-        border-radius: 50%;
+        border-radius: 20%;
       }
         /* SECTIONS */
         .port-section { padding: 5rem 0; }
@@ -490,14 +490,14 @@ export default function Portfolio() {
                   <RippleGrid
                     enableRainbow={false}
                     gridColor="#5227FF"
-                    rippleIntensity={0.05}
+                    rippleIntensity={0.04}
                     gridSize={10}
                     gridThickness={15}
-                    mouseInteraction
+                    mouseInteraction={true}
                     mouseInteractionRadius={0.8}
                     opacity={1}
-                    fadeDistance={1.5}
-                    vignetteStrength={2}
+                    fadeDistance={3}
+                    vignetteStrength={4}
                     glowIntensity={0.1}
                     gridRotation={0}
                   />
