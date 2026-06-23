@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import pic from "./pic.png";
 import RippleGrid from "./RippleGrid";
+import Aurora from "./Aurora";
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
   { icon: "🌱", name: "Spring Boot", cat: "backend" },
@@ -224,7 +225,16 @@ export default function Portfolio() {
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 
         .port-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
-
+        .aurora-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
         /* NAV */
         .port-nav {
           position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -310,7 +320,7 @@ export default function Portfolio() {
           padding: 3px; position: relative;
         }
         .port-avatar-inner {
-          width: 100%; height: 100%;  background: var(--surface);
+          width: 100%; height: 100%;  background: tarnsparent; 
           display: flex; align-items: center; justify-content: center; overflow: hidden;
           font-size: 5rem; font-weight: 700; color: var(--accent); font-family: var(--mono);
         }
@@ -443,8 +453,15 @@ export default function Portfolio() {
           .port-stats-row { justify-content: center; }
         }
       `}</style>
-
-      <ParticleCanvas />
+       <div className="aurora-background">
+        <Aurora
+          colorStops={["#7cff67", "#8f44d5", "#240a8d"]}
+          blend={0.5}
+          amplitude={0.7}
+          speed={1}
+        />
+      </div>
+        
 
       {/* NAV */}
       <nav className="port-nav">
