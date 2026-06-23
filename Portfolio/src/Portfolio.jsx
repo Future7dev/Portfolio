@@ -262,6 +262,15 @@ export default function Portfolio() {
         .port-typing {
           font-family: var(--mono); font-size: 1.1rem; color: var(--accent2);
           min-height: 2rem; margin-bottom: 1.5rem;
+          position: absolute;
+          bottom: -50px; /* adjust distance below image */
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
+          z-index: 10;
+
+          
+          font-weight: 600;
         }
         .port-cursor { animation: blink 1s step-end infinite; }
         @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
@@ -459,9 +468,9 @@ export default function Portfolio() {
                 <div className="first">Priyam</div>
                 <div className="last">Koley</div>
               </div>
-              <div className="port-typing">
+              {/* <div className="port-typing">
                 {typed}<span className="port-cursor">|</span>
-              </div>
+              </div> */}
               <p className="port-hero-desc">
                 Full-Stack Developer crafting scalable backends and polished frontends.
                 CSE student at VIT Bhopal · Passionate about real-time systems, RESTful APIs, and clean code.
@@ -503,11 +512,16 @@ export default function Portfolio() {
                   />
 
                   <img src={pic} alt="Avatar" />
+                  <div className="port-typing">
+                {typed}<span className="port-cursor">|</span>
+                </div>
                 </div>
               </div>
               </div>
               <div className="port-avatar-badge">🟢 Open to Work</div>
+               
             </div>
+           
           </div>
         </div>
       </section>
