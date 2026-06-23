@@ -263,7 +263,7 @@ export default function Portfolio() {
           font-family: var(--mono); font-size: 1.1rem; color: var(--accent2);
           min-height: 2rem; margin-bottom: 1.5rem;
           position: absolute;
-          bottom: -50px; /* adjust distance below image */
+          bottom: -1px; /* adjust distance below image */
           left: 50%;
           transform: translateX(-50%);
           white-space: nowrap;
@@ -305,12 +305,12 @@ export default function Portfolio() {
         }
         @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
         .port-avatar-ring {
-          width: 380px; height: 480px; 
+          width: 380px; height: 700px; 
          
           padding: 3px; position: relative;
         }
         .port-avatar-inner {
-          width: 100%; height: 100%; border-radius: 20%; background: var(--surface);
+          width: 100%; height: 100%;  background: var(--surface);
           display: flex; align-items: center; justify-content: center; overflow: hidden;
           font-size: 5rem; font-weight: 700; color: var(--accent); font-family: var(--mono);
         }
