@@ -302,7 +302,7 @@ export default function Portfolio() {
         .port-btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
         /* AVATAR */
-        .port-avatar-wrap { position: relative; display: flex; justify-content: center; bottom:6rem; }
+        .port-avatar-wrap { position: relative; display: flex; justify-content: center; bottom:2rem; }
         .port-orbit {
           position: absolute; width: 320px; height: 320px; top: 50%; left: 50%;
           transform: translate(-50%,-50%);
@@ -315,7 +315,7 @@ export default function Portfolio() {
         }
         @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
         .port-avatar-ring {
-          width: 380px; height: 700px; 
+          width: 480px; height: 700px; 
          
           padding: 3px; position: relative;
         }
