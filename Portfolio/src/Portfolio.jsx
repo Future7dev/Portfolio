@@ -453,6 +453,7 @@ export default function Portfolio() {
           .port-stats-row { justify-content: center; }
         }
       `}</style>
+      <ParticleCanvas />
        <div className="aurora-background">
         <Aurora
           colorStops={["#7cff67", "#8f44d5", "#240a8d"]}
