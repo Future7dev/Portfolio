@@ -316,7 +316,7 @@ export default function Portfolio() {
         }
         .port-avatar-inner img { width: 100%; height: 100%; object-fit: cover; }
         .port-avatar-badge {
-          position: absolute; bottom: 16px; right: 8px; background: var(--surface);
+          position: absolute; bottom: 129px; right: 8px; background: var(--surface);
           border: 1px solid var(--glass-border); border-radius: 20px;
           padding: 0.4rem 0.9rem; font-family: var(--mono); font-size: 0.7rem;
           color: var(--accent2); white-space: nowrap;
