@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import pic from "./pic.png";
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
   { icon: "🌱", name: "Spring Boot", cat: "backend" },
@@ -295,12 +295,12 @@ export default function Portfolio() {
         }
         @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
         .port-avatar-ring {
-          width: 280px; height: 280px; border-radius: 50%;
-          background: linear-gradient(135deg, var(--accent), var(--accent2));
+          width: 380px; height: 480px; 
+         
           padding: 3px; position: relative;
         }
         .port-avatar-inner {
-          width: 100%; height: 100%; border-radius: 50%; background: var(--surface);
+          width: 100%; height: 100%; border-radius: 20%; background: var(--surface);
           display: flex; align-items: center; justify-content: center; overflow: hidden;
           font-size: 5rem; font-weight: 700; color: var(--accent); font-family: var(--mono);
         }
@@ -463,7 +463,7 @@ export default function Portfolio() {
               <div className="port-avatar-ring">
                 <div className="port-avatar-inner">
                   
-                    <img src="pic.png" alt="Priyam Koley in a polished professional portrait inside a circular avatar frame, set against a glowing orbit accent and showing a confident, approachable expression" />
+                    <img src={pic} alt="Avatar" />
                   
                 
                 </div>
