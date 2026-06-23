@@ -270,7 +270,7 @@ export default function Portfolio() {
         .port-hero-name .first { color: var(--text); }
         .port-hero-name .last { color: var(--accent); }
         .port-typing {
-          font-family: var(--mono); font-size: 1.1rem; color: var(--accent2);
+          font-family: var(--mono); font-size: 1.6rem; color: var(--accent2);
           min-height: 2rem; margin-bottom: 1.5rem;
           position: absolute;
           bottom: -1px; /* adjust distance below image */
