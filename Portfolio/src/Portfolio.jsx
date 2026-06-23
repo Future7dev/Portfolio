@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import pic from "./pic.png";
+import RippleGrid from "./RippleGrid";
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
   { icon: "🌱", name: "Spring Boot", cat: "backend" },
@@ -311,7 +312,29 @@ export default function Portfolio() {
           padding: 0.4rem 0.9rem; font-family: var(--mono); font-size: 0.7rem;
           color: var(--accent2); white-space: nowrap;
         }
+              .avatar-bg {
+        position: relative;
+        width: 300px;      /* adjust */
+        height: 300px;     /* adjust */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
+      .avatar-bg > div:first-child {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .avatar-bg img {
+        position: relative;
+        z-index: 1;
+        width: 220px;      /* adjust */
+        height: 220px;     /* adjust */
+        object-fit: cover;
+        border-radius: 50%;
+      }
         /* SECTIONS */
         .port-section { padding: 5rem 0; }
         .port-section-header { margin-bottom: 3rem; text-align: center; }
@@ -461,12 +484,27 @@ export default function Portfolio() {
             <div className="port-avatar-wrap">
               <div className="port-orbit"><div className="port-orbit-dot" /></div>
               <div className="port-avatar-ring">
-                <div className="port-avatar-inner">
-                  
-                    <img src={pic} alt="Avatar" />
-                  
                 
+                <div className="port-avatar-inner">
+                <div className="avatar-bg">
+                  <RippleGrid
+                    enableRainbow={false}
+                    gridColor="#5227FF"
+                    rippleIntensity={0.05}
+                    gridSize={10}
+                    gridThickness={15}
+                    mouseInteraction
+                    mouseInteractionRadius={0.8}
+                    opacity={1}
+                    fadeDistance={1.5}
+                    vignetteStrength={2}
+                    glowIntensity={0.1}
+                    gridRotation={0}
+                  />
+
+                  <img src={pic} alt="Avatar" />
                 </div>
+              </div>
               </div>
               <div className="port-avatar-badge">🟢 Open to Work</div>
             </div>
