@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import pic from "./pic.png";
 import RippleGrid from "./RippleGrid";
 import Aurora from "./Aurora";
+import ElectricBorder from "./ElectricBorder";
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
   { icon: "🌱", name: "Spring Boot", cat: "backend" },
@@ -651,6 +652,13 @@ export default function Portfolio() {
           </div>
           <div className="port-proj-grid">
             {projects.map((p) => (
+              <ElectricBorder
+                color="#7df9ff"
+                speed={1}
+                chaos={0.12}
+                thickness={2}
+                style={{ borderRadius: 16 }}
+              >
               <div key={p.name} className="port-proj-card">
                 <div className="port-proj-header">
                   <div className="port-proj-tags">
@@ -666,6 +674,7 @@ export default function Portfolio() {
                   {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="port-proj-link live">🌐 Live</a>}
                 </div>
               </div>
+              </ElectricBorder>
             ))}
           </div>
         </div>
