@@ -493,6 +493,7 @@ export default function Portfolio() {
       </nav>
 
       {/* HERO */}
+      <AnimatedSection>
       <section className="port-hero" id="about">
         <div className="port-container">
           <div className="port-hero-grid">
@@ -559,7 +560,7 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
+      </AnimatedSection>
       {/* SKILLS */}
       <AnimatedSection>
         <section className="port-section" id="skills">
