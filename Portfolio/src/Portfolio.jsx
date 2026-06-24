@@ -35,7 +35,7 @@ const projects = [
   },
   {
     name: "Code-O-Share",
-    desc: "A MERN-stack collaborative code sharing platform to paste, share, and discuss snippets in real time.",
+    desc: "A MERN-stack collaborative code sharing platform to paste, share, and discuss snippets in real time and real time chatting",
     tags: [{ label: "MERN", cls: "mern" }, { label: "Real-time", cls: "mern" }],
     github: "https://github.com/Future7dev/code-o-share",
     live: "https://code-o-share.vercel.app/",
