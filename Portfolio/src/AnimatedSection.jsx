@@ -3,8 +3,8 @@ import { useInView } from "react-intersection-observer";
 
 const AnimatedSection = ({ children }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
+    triggerOnce: false,
+    threshold: 0.3,
   });
 
   return (
@@ -12,7 +12,7 @@ const AnimatedSection = ({ children }) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.7 }}
     >
       {children}
     </motion.div>

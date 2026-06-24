@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import pic from "./pic.png";
 import RippleGrid from "./RippleGrid";
 import Aurora from "./Aurora";
+import AnimatedSection from "./AnimatedSection";
 import ElectricBorder from "./ElectricBorder";
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
@@ -560,223 +561,233 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section className="port-section" id="skills">
-        <div className="port-container">
-          <div className="port-section-header">
-            <div className="port-section-tag">// tech_stack</div>
-            <h2 className="port-section-title">Skills & Technologies</h2>
-            <div className="port-section-line" />
-          </div>
-          <div className="port-skills-grid">
-            {skills.map((s) => (
-              <div key={s.name} className="port-skill-card">
-                <div className="port-skill-icon">{s.icon}</div>
-                <div>
-                  <div className="port-skill-name">{s.name}</div>
-                  <div className="port-skill-cat">{s.cat}</div>
+      <AnimatedSection>
+        <section className="port-section" id="skills">
+          <div className="port-container">
+            <div className="port-section-header">
+              <div className="port-section-tag">// tech_stack</div>
+              <h2 className="port-section-title">Skills & Technologies</h2>
+              <div className="port-section-line" />
+            </div>
+            <div className="port-skills-grid">
+              {skills.map((s) => (
+                <div key={s.name} className="port-skill-card">
+                  <div className="port-skill-icon">{s.icon}</div>
+                  <div>
+                    <div className="port-skill-name">{s.name}</div>
+                    <div className="port-skill-cat">{s.cat}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* ACHIEVEMENTS */}
-      <section className="port-section" id="achievements">
-        <div className="port-container">
-          <div className="port-section-header">
-            <div className="port-section-tag">// my_journey</div>
-            <h2 className="port-section-title">Achievements</h2>
-            <div className="port-section-line" />
-          </div>
-          <div className="port-skills-grid">
-            <ElectricBorder
-              color="#7df9ff"
-              speed={1}
-              chaos={0.12}
-              thickness={2}
-              style={{ borderRadius: 16 }}
-            >
-            <div className="port-skill-card">
-              <div className="port-skill-icon">🏆</div>
-              <div>
-                <div className="port-skill-name">LeetCode Contest Rating</div>
-                <div className="port-skill-cat">1586</div>
-              </div>
+      <AnimatedSection>
+        <section className="port-section" id="achievements">
+          <div className="port-container">
+            <div className="port-section-header">
+              <div className="port-section-tag">// my_journey</div>
+              <h2 className="port-section-title">Achievements</h2>
+              <div className="port-section-line" />
             </div>
-            </ElectricBorder>
-            <ElectricBorder
-              color="#7df9ff"
-              speed={1}
-              chaos={0.12}
-              thickness={2}
-              style={{ borderRadius: 16 }}
-            >
-            <div className="port-skill-card">
-              <div className="port-skill-icon">🧠</div>
-              <div>
-                <div className="port-skill-name">700+ DSA Questions</div>
-                <div className="port-skill-cat">Solved on LeetCode & GFG</div>
-              </div>
-            </div>
-            </ElectricBorder>
-            <ElectricBorder
-              color="#7df9ff"
-              speed={1}
-              chaos={0.12}
-              thickness={2}
-              style={{ borderRadius: 16 }}
-            >
-            <div className="port-skill-card">
-              <div className="port-skill-icon">🏅</div>
-              <div>
-                <div className="port-skill-name">NPTEL Elite Badge</div>
-                <div className="port-skill-cat">Certification</div>
-              </div>
-            </div>
-            </ElectricBorder>
-            <ElectricBorder
-              color="#7df9ff"
-              speed={1}
-              chaos={0.12}
-              thickness={2}
-              style={{ borderRadius: 16 }}
-            >
-            <div className="port-skill-card">
-              <div className="port-skill-icon">⭐️</div>
-              <div>
-                <div className="port-skill-name">5 Star Gold Badge</div>
-                <div className="port-skill-cat">Java & Python on HackerRank</div>
-              </div>
-            </div>
-            </ElectricBorder>
-          </div>
-        </div>
-      </section>
-
-      {/* ACADEMIC */}
-      <section className="port-section" id="academic">
-        <div className="port-container">
-          <div className="port-section-header">
-            <div className="port-section-tag">// my_education</div>
-            <h2 className="port-section-title">Academic Background</h2>
-            <div className="port-section-line" />
-          </div>
-          <div className="port-skills-grid">
-            <div className="port-skill-card">
-              <div className="port-skill-icon">🎓</div>
-              <div>
-                <div className="port-skill-name">B.Tech (CSE)</div>
-                <div className="port-skill-cat">8.95 CGPA</div>
-              </div>
-            </div>
-            <div className="port-skill-card">
-              <div className="port-skill-icon">🏫</div>
-              <div>
-                <div className="port-skill-name">Class 12th</div>
-                <div className="port-skill-cat">91%</div>
-              </div>
-            </div>
-            <div className="port-skill-card">
-              <div className="port-skill-icon">📚</div>
-              <div>
-                <div className="port-skill-name">Class 10th</div>
-                <div className="port-skill-cat">85%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section className="port-section" id="projects">
-        <div className="port-container">
-          <div className="port-section-header">
-            <div className="port-section-tag">// my_work</div>
-            <h2 className="port-section-title">Featured Projects</h2>
-            <div className="port-section-line" />
-          </div>
-          <div className="port-proj-grid">
-            {projects.map((p) => (
+            <div className="port-skills-grid">
               <ElectricBorder
-                key={p.name}
                 color="#7df9ff"
                 speed={1}
                 chaos={0.12}
                 thickness={2}
                 style={{ borderRadius: 16 }}
               >
-              <div className="port-proj-card">
-                <div className="port-proj-header">
-                  <div className="port-proj-tags">
-                    {p.tags.map((t) => (
-                      <span key={t.label} className={`port-proj-tag port-tag-${t.cls}`}>{t.label}</span>
-                    ))}
+                <div className="port-skill-card">
+                  <div className="port-skill-icon">🏆</div>
+                  <div>
+                    <div className="port-skill-name">LeetCode Contest Rating</div>
+                    <div className="port-skill-cat">1586</div>
                   </div>
-                  <div className="port-proj-name">{p.name}</div>
-                  <div className="port-proj-desc">{p.desc}</div>
                 </div>
-                <div className="port-proj-links">
-                  <a href={p.github} target="_blank" rel="noreferrer" className="port-proj-link">🐙 GitHub</a>
-                  {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="port-proj-link live">🌐 Live</a>}
+              </ElectricBorder>
+              <ElectricBorder
+                color="#7df9ff"
+                speed={1}
+                chaos={0.12}
+                thickness={2}
+                style={{ borderRadius: 16 }}
+              >
+                <div className="port-skill-card">
+                  <div className="port-skill-icon">🧠</div>
+                  <div>
+                    <div className="port-skill-name">700+ DSA Questions</div>
+                    <div className="port-skill-cat">Solved on LeetCode & GFG</div>
+                  </div>
+                </div>
+              </ElectricBorder>
+              <ElectricBorder
+                color="#7df9ff"
+                speed={1}
+                chaos={0.12}
+                thickness={2}
+                style={{ borderRadius: 16 }}
+              >
+                <div className="port-skill-card">
+                  <div className="port-skill-icon">🏅</div>
+                  <div>
+                    <div className="port-skill-name">NPTEL Elite Badge</div>
+                    <div className="port-skill-cat">Certification</div>
+                  </div>
+                </div>
+              </ElectricBorder>
+              <ElectricBorder
+                color="#7df9ff"
+                speed={1}
+                chaos={0.12}
+                thickness={2}
+                style={{ borderRadius: 16 }}
+              >
+                <div className="port-skill-card">
+                  <div className="port-skill-icon">⭐️</div>
+                  <div>
+                    <div className="port-skill-name">5 Star Gold Badge</div>
+                    <div className="port-skill-cat">Java & Python on HackerRank</div>
+                  </div>
+                </div>
+              </ElectricBorder>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* ACADEMIC */}
+      <AnimatedSection>
+        <section className="port-section" id="academic">
+          <div className="port-container">
+            <div className="port-section-header">
+              <div className="port-section-tag">// my_education</div>
+              <h2 className="port-section-title">Academic Background</h2>
+              <div className="port-section-line" />
+            </div>
+            <div className="port-skills-grid">
+              <div className="port-skill-card">
+                <div className="port-skill-icon">🎓</div>
+                <div>
+                  <div className="port-skill-name">B.Tech (CSE)</div>
+                  <div className="port-skill-cat">8.95 CGPA</div>
                 </div>
               </div>
-              </ElectricBorder>
-            ))}
+              <div className="port-skill-card">
+                <div className="port-skill-icon">🏫</div>
+                <div>
+                  <div className="port-skill-name">Class 12th</div>
+                  <div className="port-skill-cat">91%</div>
+                </div>
+              </div>
+              <div className="port-skill-card">
+                <div className="port-skill-icon">📚</div>
+                <div>
+                  <div className="port-skill-name">Class 10th</div>
+                  <div className="port-skill-cat">85%</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
+
+      {/* PROJECTS */}
+      <AnimatedSection>
+        <section className="port-section" id="projects">
+          <div className="port-container">
+            <div className="port-section-header">
+              <div className="port-section-tag">// my_work</div>
+              <h2 className="port-section-title">Featured Projects</h2>
+              <div className="port-section-line" />
+            </div>
+            <div className="port-proj-grid">
+              {projects.map((p) => (
+                <ElectricBorder
+                  key={p.name}
+                  color="#7df9ff"
+                  speed={1}
+                  chaos={0.12}
+                  thickness={2}
+                  style={{ borderRadius: 16 }}
+                >
+                  <div className="port-proj-card">
+                    <div className="port-proj-header">
+                      <div className="port-proj-tags">
+                        {p.tags.map((t) => (
+                          <span key={t.label} className={`port-proj-tag port-tag-${t.cls}`}>{t.label}</span>
+                        ))}
+                      </div>
+                      <div className="port-proj-name">{p.name}</div>
+                      <div className="port-proj-desc">{p.desc}</div>
+                    </div>
+                    <div className="port-proj-links">
+                      <a href={p.github} target="_blank" rel="noreferrer" className="port-proj-link">🐙 GitHub</a>
+                      {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="port-proj-link live">🌐 Live</a>}
+                    </div>
+                  </div>
+                </ElectricBorder>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* CONTACT */}
-      <section className="port-section" id="contact">
-        <div className="port-container">
-          <div className="port-section-header">
-            <div className="port-section-tag">// get_in_touch</div>
-            <h2 className="port-section-title">Contact</h2>
-            <div className="port-section-line" />
-          </div>
-          <div className="port-contact-wrap">
-            <div className="port-contact-text">
-              <h3>Let's build something together</h3>
-              <p>Whether it's a job opportunity, collaboration, or just a chat about tech — my inbox is always open.</p>
-              <div className="port-contact-links">
-                {[
-                  ["✉️", "koleypriyam8@gmail.com", "mailto:koleypriyam8@gmail.com"],
-                  ["💼", "LinkedIn · priyam-koley-pk22", "https://www.linkedin.com/in/priyam-koley-pk22/"],
-                  ["🧩", "LeetCode · P20__", "https://leetcode.com/u/P20__/"],
-                  ["🐙", "GitHub · Future7dev", "https://github.com/Future7dev"],
-                  ["📄", "Download Resume", "https://github.com/Future7dev/Resume/blob/main/java_Priyam_v2.pdf"],
-                ].map(([icon, label, href]) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="port-contact-link">
-                    <span>{icon}</span> {label}
-                  </a>
-                ))}
-              </div>
+      <AnimatedSection>
+        <section className="port-section" id="contact">
+          <div className="port-container">
+            <div className="port-section-header">
+              <div className="port-section-tag">// get_in_touch</div>
+              <h2 className="port-section-title">Contact</h2>
+              <div className="port-section-line" />
             </div>
+            <div className="port-contact-wrap">
+              <div className="port-contact-text">
+                <h3>Let's build something together</h3>
+                <p>Whether it's a job opportunity, collaboration, or just a chat about tech — my inbox is always open.</p>
+                <div className="port-contact-links">
+                  {[
+                    ['✉️', 'koleypriyam8@gmail.com', 'mailto:koleypriyam8@gmail.com'],
+                    ['💼', 'LinkedIn · priyam-koley-pk22', 'https://www.linkedin.com/in/priyam-koley-pk22/'],
+                    ['🧩', 'LeetCode · P20__', 'https://leetcode.com/u/P20__/'],
+                    ['🐙', 'GitHub · Future7dev', 'https://github.com/Future7dev'],
+                    ['📄', 'Download Resume', 'https://github.com/Future7dev/Resume/blob/main/java_Priyam_v2.pdf'],
+                  ].map(([icon, label, href]) => (
+                    <a key={label} href={href} target="_blank" rel="noreferrer" className="port-contact-link">
+                      <span>{icon}</span> {label}
+                    </a>
+                  ))}
+                </div>
+              </div>
 
-            <div className="port-form">
-              <div className="port-form-group">
-                <label>// name</label>
-                <input type="text" placeholder="Your name" />
+              <div className="port-form">
+                <div className="port-form-group">
+                  <label>{'// name'}</label>
+                  <input type="text" placeholder="Your name" />
+                </div>
+                <div className="port-form-group">
+                  <label>{'// email'}</label>
+                  <input type="email" placeholder="your@email.com" />
+                </div>
+                <div className="port-form-group">
+                  <label>{'// message'}</label>
+                  <textarea placeholder="What's on your mind?" />
+                </div>
+                <button
+                  className={`port-btn-send${sent ? ' sent' : ''}`}
+                  onClick={() => setSent(true)}
+                >
+                  {sent ? 'Message Sent! 🚀' : 'Send Message'}
+                </button>
               </div>
-              <div className="port-form-group">
-                <label>// email</label>
-                <input type="email" placeholder="your@email.com" />
-              </div>
-              <div className="port-form-group">
-                <label>// message</label>
-                <textarea placeholder="What's on your mind?" />
-              </div>
-              <button
-                className={`port-btn-send${sent ? " sent" : ""}`}
-                onClick={() => setSent(true)}
-              >
-                {sent ? "Message Sent! 🚀" : "Send Message"}
-              </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* FOOTER */}
       <footer className="port-footer">
