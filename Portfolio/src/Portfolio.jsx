@@ -63,6 +63,20 @@ const projects = [
   },
 ];
 
+
+const achievements = [
+  { icon: "🏆", name: "LeetCode Contest Rating", value: "1586" },
+  { icon: "🧠", name: "700+ DSA Questions", value: "Solved on LeetCode & GFG" },
+  { icon: "🏅", name: "NPTEL Elite Badge", value: "Certification" },
+  { icon: "⭐️", name: "5 Star Gold Badge", value: "Java & Python on HackerRank" },
+];
+
+const academic = [
+  { icon: "🎓", name: "B.Tech (CSE)", value: "8.95 CGPA" },
+  { icon: "🏫", name: "Class 12th", value: "91%" },
+  { icon: "📚", name: "Class 10th", value: "85%" },
+];
+
 const phrases = [
   "Full-Stack Developer",
   "Java Backend Specialist",
@@ -576,6 +590,13 @@ export default function Portfolio() {
             <div className="port-section-line" />
           </div>
           <div className="port-skills-grid">
+            <ElectricBorder
+              color="#7df9ff"
+              speed={1}
+              chaos={0.12}
+              thickness={2}
+              style={{ borderRadius: 16 }}
+            >
             <div className="port-skill-card">
               <div className="port-skill-icon">🏆</div>
               <div>
@@ -583,6 +604,14 @@ export default function Portfolio() {
                 <div className="port-skill-cat">1586</div>
               </div>
             </div>
+            </ElectricBorder>
+            <ElectricBorder
+              color="#7df9ff"
+              speed={1}
+              chaos={0.12}
+              thickness={2}
+              style={{ borderRadius: 16 }}
+            >
             <div className="port-skill-card">
               <div className="port-skill-icon">🧠</div>
               <div>
@@ -590,6 +619,14 @@ export default function Portfolio() {
                 <div className="port-skill-cat">Solved on LeetCode & GFG</div>
               </div>
             </div>
+            </ElectricBorder>
+            <ElectricBorder
+              color="#7df9ff"
+              speed={1}
+              chaos={0.12}
+              thickness={2}
+              style={{ borderRadius: 16 }}
+            >
             <div className="port-skill-card">
               <div className="port-skill-icon">🏅</div>
               <div>
@@ -597,6 +634,14 @@ export default function Portfolio() {
                 <div className="port-skill-cat">Certification</div>
               </div>
             </div>
+            </ElectricBorder>
+            <ElectricBorder
+              color="#7df9ff"
+              speed={1}
+              chaos={0.12}
+              thickness={2}
+              style={{ borderRadius: 16 }}
+            >
             <div className="port-skill-card">
               <div className="port-skill-icon">⭐️</div>
               <div>
@@ -604,6 +649,7 @@ export default function Portfolio() {
                 <div className="port-skill-cat">Java & Python on HackerRank</div>
               </div>
             </div>
+            </ElectricBorder>
           </div>
         </div>
       </section>
@@ -653,13 +699,14 @@ export default function Portfolio() {
           <div className="port-proj-grid">
             {projects.map((p) => (
               <ElectricBorder
+                key={p.name}
                 color="#7df9ff"
                 speed={1}
                 chaos={0.12}
                 thickness={2}
                 style={{ borderRadius: 16 }}
               >
-              <div key={p.name} className="port-proj-card">
+              <div className="port-proj-card">
                 <div className="port-proj-header">
                   <div className="port-proj-tags">
                     {p.tags.map((t) => (
