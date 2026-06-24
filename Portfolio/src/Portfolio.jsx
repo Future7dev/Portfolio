@@ -469,7 +469,7 @@ export default function Portfolio() {
         <div className="port-nav-inner">
           <div className="port-logo">pk<span>.dev</span></div>
           <ul className="port-nav-links">
-            {["about", "skills", "projects", "contact"].map((s) => (
+            {["about", "skills", "achievements", "academic", "projects", "contact"].map((s) => (
               <li key={s}><button onClick={() => scrollTo(s)}>{s}</button></li>
             ))}
           </ul>
@@ -562,6 +562,81 @@ export default function Portfolio() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ACHIEVEMENTS */}
+      <section className="port-section" id="achievements">
+        <div className="port-container">
+          <div className="port-section-header">
+            <div className="port-section-tag">// my_journey</div>
+            <h2 className="port-section-title">Achievements</h2>
+            <div className="port-section-line" />
+          </div>
+          <div className="port-skills-grid">
+            <div className="port-skill-card">
+              <div className="port-skill-icon">🏆</div>
+              <div>
+                <div className="port-skill-name">LeetCode Contest Rating</div>
+                <div className="port-skill-cat">1586</div>
+              </div>
+            </div>
+            <div className="port-skill-card">
+              <div className="port-skill-icon">🧠</div>
+              <div>
+                <div className="port-skill-name">700+ DSA Questions</div>
+                <div className="port-skill-cat">Solved on LeetCode & GFG</div>
+              </div>
+            </div>
+            <div className="port-skill-card">
+              <div className="port-skill-icon">🏅</div>
+              <div>
+                <div className="port-skill-name">NPTEL Elite Badge</div>
+                <div className="port-skill-cat">Certification</div>
+              </div>
+            </div>
+            <div className="port-skill-card">
+              <div className="port-skill-icon">⭐️</div>
+              <div>
+                <div className="port-skill-name">5 Star Gold Badge</div>
+                <div className="port-skill-cat">Java & Python on HackerRank</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ACADEMIC */}
+      <section className="port-section" id="academic">
+        <div className="port-container">
+          <div className="port-section-header">
+            <div className="port-section-tag">// my_education</div>
+            <h2 className="port-section-title">Academic Background</h2>
+            <div className="port-section-line" />
+          </div>
+          <div className="port-skills-grid">
+            <div className="port-skill-card">
+              <div className="port-skill-icon">🎓</div>
+              <div>
+                <div className="port-skill-name">B.Tech (CSE)</div>
+                <div className="port-skill-cat">8.95 CGPA</div>
+              </div>
+            </div>
+            <div className="port-skill-card">
+              <div className="port-skill-icon">🏫</div>
+              <div>
+                <div className="port-skill-name">Class 12th</div>
+                <div className="port-skill-cat">91%</div>
+              </div>
+            </div>
+            <div className="port-skill-card">
+              <div className="port-skill-icon">📚</div>
+              <div>
+                <div className="port-skill-name">Class 10th</div>
+                <div className="port-skill-cat">85%</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
