@@ -595,7 +595,19 @@ export default function Portfolio() {
               <h2 className="port-section-title">Skills & Technologies</h2>
               <div className="port-section-line" />
             </div>
-            <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+           
+            <div className="port-skills-grid">
+              {skills.map((s) => (
+                <div key={s.name} className="port-skill-card">
+                  <div className="port-skill-icon">{s.icon}</div>
+                  <div>
+                    <div className="port-skill-name">{s.name}</div>
+                    <div className="port-skill-cat">{s.cat}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+             <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
           {/* Basic horizontal loop */}
           <LogoLoop
             logos={techLogos}
@@ -610,17 +622,6 @@ export default function Portfolio() {
             ariaLabel="Technology partners"
           />
         </div>
-            <div className="port-skills-grid">
-              {skills.map((s) => (
-                <div key={s.name} className="port-skill-card">
-                  <div className="port-skill-icon">{s.icon}</div>
-                  <div>
-                    <div className="port-skill-name">{s.name}</div>
-                    <div className="port-skill-cat">{s.cat}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
       </AnimatedSection>
