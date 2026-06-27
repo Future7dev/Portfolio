@@ -4,6 +4,30 @@ import RippleGrid from "./RippleGrid";
 import Aurora from "./Aurora";
 import AnimatedSection from "./AnimatedSection";
 import ElectricBorder from "./ElectricBorder";
+import LogoLoop from './LogoLoop';
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiGithub,
+  SiDocker,
+  SiJavascript,
+  SiMongodb,
+  SiSpringboot,
+} from "react-icons/si";
+
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { node: <SiJavascript />, title: "JavaScript", href: "https://developer.mozilla.org/docs/Web/JavaScript" },
+  { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
+  { node: <SiDocker />, title: "Docker", href: "https://www.docker.com" },
+  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  { node: <SiSpringboot />, title: "Spring Boot", href: "https://spring.io/projects/spring-boot" },
+];
 const skills = [
   { icon: "☕", name: "Java", cat: "backend" },
   { icon: "🌱", name: "Spring Boot", cat: "backend" },
@@ -564,12 +588,28 @@ export default function Portfolio() {
       {/* SKILLS */}
       <AnimatedSection>
         <section className="port-section" id="skills">
+          
           <div className="port-container">
             <div className="port-section-header">
               <div className="port-section-tag">// tech_stack</div>
               <h2 className="port-section-title">Skills & Technologies</h2>
               <div className="port-section-line" />
             </div>
+            <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+          {/* Basic horizontal loop */}
+          <LogoLoop
+            logos={techLogos}
+            speed={100}
+            direction="left"
+            logoHeight={60}
+            gap={60}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#151515"
+            ariaLabel="Technology partners"
+          />
+        </div>
             <div className="port-skills-grid">
               {skills.map((s) => (
                 <div key={s.name} className="port-skill-card">
