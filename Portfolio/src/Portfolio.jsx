@@ -604,7 +604,7 @@ export default function Portfolio() {
             logoHeight={60}
             gap={60}
             hoverSpeed={0}
-            scaleOnHover
+            scaleOnHover={true}
             fadeOut
             fadeOutColor="#151515"
             ariaLabel="Technology partners"

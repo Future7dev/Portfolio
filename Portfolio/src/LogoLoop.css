@@ -48,6 +48,7 @@
 }
 
 .logoloop__item {
+    list-style: none;
   flex: 0 0 auto;
   margin-right: var(--logoloop-gap);
   font-size: var(--logoloop-logoHeight);
