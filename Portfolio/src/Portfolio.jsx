@@ -227,6 +227,7 @@ function ParticleCanvas() {
 export default function Portfolio() {
   const typed = useTyping(phrases);
   const [sent, setSent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -271,6 +272,7 @@ export default function Portfolio() {
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
   };
 
   return (
@@ -335,6 +337,16 @@ export default function Portfolio() {
           cursor: pointer; font-family: var(--sans); transition: color 0.2s;
         }
         .port-nav-links button:hover { color: var(--text); }
+        .port-hamburger { display: none; }
+        .port-mobile-nav {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10,10,15,0.98); backdrop-filter: blur(10px);
+            list-style: none; gap: 2rem;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+            display: none; /* Hidden by default */
+        }
+        .port-mobile-nav.open { display: flex; flex-direction: column; align-items: center; justify-content: center; transform: translateY(0); }
 
         /* HERO */
         .port-hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
@@ -527,6 +539,42 @@ export default function Portfolio() {
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+          .port-nav-links { display: none; }
+          .port-hamburger { 
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 101;
+           }
+          .port-hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+          }
+          .port-hamburger.open div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+          .port-hamburger.open div:nth-child(2) {
+            opacity: 0;
+          }
+          .port-hamburger.open div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+          }
+          .port-mobile-nav {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10,10,15,0.98); backdrop-filter: blur(10px);
+            list-style: none; gap: 2rem;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+          }
+          .port-mobile-nav.open { transform: translateY(0); }
+          .port-mobile-nav button {
+            background: none; border: none; color: var(--text); font-size: 1.2rem;
+            cursor: pointer; font-family: var(--sans);
+          }
           .port-hero-grid { grid-template-columns: 1fr;gap:0; text-align: center; }
           .port-avatar-wrap { order: -1; }
           .port-avatar-ring { width: 280px; height: 380px; }
@@ -560,7 +608,17 @@ export default function Portfolio() {
               <li key={s}><button onClick={() => scrollTo(s)}>{s}</button></li>
             ))}
           </ul>
+          <button className={`port-hamburger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+            <div />
+            <div />
+            <div />
+          </button>
         </div>
+        <ul className={`port-mobile-nav ${menuOpen ? 'open' : ''}`}>
+            {["about", "skills", "achievements", "academic", "projects", "contact"].map((s) => (
+              <li key={s}><button onClick={() => scrollTo(s)}>{s}</button></li>
+            ))}
+        </ul>
       </nav>
 
       {/* HERO */}
