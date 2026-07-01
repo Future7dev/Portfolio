@@ -620,46 +620,20 @@ export default function Portfolio() {
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-          .port-nav-links { display: none; } /* Hide desktop nav on mobile */
-          .port-hamburger {
-            display: flex; /* Show hamburger on mobile */
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 101;
-           }
-          .port-hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
-          }
-          .port-hamburger.open div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-          }
-          .port-hamburger.open div:nth-child(2) {
-            opacity: 0;
-          }
-          .port-hamburger.open div:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-          }
-          .port-mobile-nav {
-            /* Initially hidden on mobile, will be shown by .open class */
-            flex-direction: column; align-items: center; justify-content: center;
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10,10,15,0.98); backdrop-filter: blur(10px);
-            list-style: none; gap: 2rem;
-            transform: translateY(-100%);
-            transition: transform 0.3s ease-in-out;
-          }
-          .port-mobile-nav.open {
-            display: flex; /* Show when open */
-            transform: translateY(0);
-          }
-          .port-mobile-nav button {
-            background: none; border: none; color: var(--text); font-size: 1.2rem;
-            cursor: pointer; font-family: var(--sans);
-          }
+          @media (max-width:768px){
+
+    .port-nav-links{
+        display:none;
+    }
+
+    .port-hamburger{
+        display:block;
+    }
+
+    .port-nav-inner{
+        align-items:center;
+    }
+}
           .port-hero-grid { grid-template-columns: 1fr;gap:0; text-align: center; }
           .port-avatar-wrap { order: -1; }
           .port-avatar-ring { width: 280px; height: 380px; }
