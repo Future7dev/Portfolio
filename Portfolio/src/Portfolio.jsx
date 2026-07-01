@@ -394,6 +394,8 @@ export default function Portfolio() {
         object-fit: cover;
         border-radius: 20%;
       }
+
+
         /* SECTIONS */
         .port-section { padding: 5rem 0; }
         .port-section-header { margin-bottom: 3rem; text-align: center; }
@@ -485,12 +487,15 @@ export default function Portfolio() {
         @media (max-width: 768px) {
           .port-hero-grid { grid-template-columns: 1fr; text-align: center; }
           .port-avatar-wrap { order: -1; }
-          .port-avatar-ring { width: 180px; height: 180px; }
+          .port-avatar-ring { width: 280px; height: 380px; }
           .port-orbit { width: 220px; height: 220px; }
           .port-contact-wrap { grid-template-columns: 1fr; }
           .port-hero-desc { max-width: 100%; }
           .port-cta { justify-content: center; }
           .port-stats-row { justify-content: center; }
+          .avatar-bg { width: 200px; height: 250px; }
+          .avatar-bg img { width: 180px; height: 230px; }
+          .port-typing { bottom: -45px; left: 50%; transform: translateX(-50%); font-size: 1.2rem; }
         }
       `}</style>
       <ParticleCanvas />
