@@ -349,9 +349,9 @@ export default function Portfolio() {
         .port-hamburger { display: none; }
         .port-mobile-nav{
     position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
+    top: 50px;
+    left: 5rem;
+    width: 30%;
     background: rgba(10,10,15,.97);
     backdrop-filter: blur(15px);
 
