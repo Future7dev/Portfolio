@@ -5,6 +5,7 @@ import Aurora from "./Aurora";
 import AnimatedSection from "./AnimatedSection";
 import ElectricBorder from "./ElectricBorder";
 import LogoLoop from './LogoLoop';
+import emailjs from "@emailjs/browser";
 import {
   SiReact,
   SiNextdotjs,
