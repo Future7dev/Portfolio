@@ -485,7 +485,7 @@ export default function Portfolio() {
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-          .port-hero-grid { grid-template-columns: 1fr; text-align: center; }
+          .port-hero-grid { grid-template-columns: 1fr;gap:0; text-align: center; }
           .port-avatar-wrap { order: -1; }
           .port-avatar-ring { width: 280px; height: 380px; }
           .port-orbit { width: 220px; height: 220px; }
