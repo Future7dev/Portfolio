@@ -274,6 +274,15 @@ export default function Portfolio() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
+  useEffect(() => {
+  const close = () => setMenuOpen(false);
+
+  if (menuOpen) {
+    window.addEventListener("scroll", close);
+  }
+
+  return () => window.removeEventListener("scroll", close);
+}, [menuOpen]);
 
   return (
     <>
