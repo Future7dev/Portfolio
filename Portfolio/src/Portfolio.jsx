@@ -350,8 +350,8 @@ export default function Portfolio() {
         .port-mobile-nav{
     position: fixed;
     top: 50px;
-    left: 5rem;
-    width: 30%;
+    left: 60%;
+    width: 33%;
     background: rgba(10,10,15,.97);
     backdrop-filter: blur(15px);
 
