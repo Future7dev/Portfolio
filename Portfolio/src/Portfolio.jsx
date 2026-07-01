@@ -854,25 +854,48 @@ export default function Portfolio() {
               </div>
 
               <div className="port-form">
-                <div className="port-form-group">
-                  <label>{'// name'}</label>
-                  <input type="text" placeholder="Your name" />
-                </div>
-                <div className="port-form-group">
-                  <label>{'// email'}</label>
-                  <input type="email" placeholder="your@email.com" />
-                </div>
-                <div className="port-form-group">
-                  <label>{'// message'}</label>
-                  <textarea placeholder="What's on your mind?" />
-                </div>
-                <button
-                  className={`port-btn-send${sent ? ' sent' : ''}`}
-                  onClick={() => setSent(true)}
-                >
-                  {sent ? 'Message Sent! 🚀' : 'Send Message'}
-                </button>
-              </div>
+      <div className="port-form-group">
+        <label>// name</label>
+        <input
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Your name"
+          required
+        />
+      </div>
+
+      <div className="port-form-group">
+        <label>// email</label>
+        <input
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+          placeholder="your@email.com"
+          required
+        />
+      </div>
+
+      <div className="port-form-group">
+        <label>// message</label>
+        <textarea
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+          placeholder="What's on your mind?"
+          required
+        />
+      </div>
+
+      <button
+        className={`port-btn-send ${sent ? "sent" : ""}`}
+        onClick={sendEmail}
+      >
+        {sent ? "Message Sent! 🚀" : "Send Message"}
+      </button>
+    </div>
             </div>
           </div>
         </section>
