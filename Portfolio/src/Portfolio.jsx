@@ -244,10 +244,10 @@ export default function Portfolio() {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_hw1mlkv",
+        "template_0l7jye4",
         form,
-        "YOUR_PUBLIC_KEY"
+        "CPOa9THHbkvls_bBM"
       )
       .then(
         () => {
