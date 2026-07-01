@@ -227,6 +227,47 @@ function ParticleCanvas() {
 export default function Portfolio() {
   const typed = useTyping(phrases);
   const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+   const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        () => {
+          setSent(true);
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+
+          setTimeout(() => setSent(false), 3000);
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send message.");
+        }
+      );
+  };
+
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
