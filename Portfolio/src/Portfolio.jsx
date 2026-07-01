@@ -383,11 +383,51 @@ export default function Portfolio() {
     font-size:1.1rem;
     cursor:pointer;
 }
-
-.port-mobile-nav button:hover{
-    color:var(--accent);
+.port-hamburger{
+    display:none;
+    width:32px;
+    height:26px;
+    position:relative;
+    cursor:pointer;
+    background:none;
+    border:none;
+    z-index:101;
 }
-        .port-mobile-nav.open { display: flex; flex-direction: column; align-items: center; justify-content: center; transform: translateY(0); }
+
+.port-hamburger div{
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:#fff;
+    border-radius:5px;
+    transition:.35s;
+}
+
+.port-hamburger div:nth-child(1){
+    top:0;
+}
+
+.port-hamburger div:nth-child(2){
+    top:11px;
+}
+
+.port-hamburger div:nth-child(3){
+    bottom:0;
+}
+
+.port-hamburger.open div:nth-child(1){
+    transform:rotate(45deg);
+    top:11px;
+}
+
+.port-hamburger.open div:nth-child(2){
+    opacity:0;
+}
+
+.port-hamburger.open div:nth-child(3){
+    transform:rotate(-45deg);
+    bottom:12px;
+}
 
         /* HERO */
         .port-hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
